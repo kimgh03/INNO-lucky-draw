@@ -45,7 +45,7 @@ spinButton.addEventListener("click", () => {
 
   spinButton.disabled = true;
   spinButton.textContent = "Drawing...";
-  chanceStatus.textContent = "룰렛이 돌아가는 중입니다.";
+  chanceStatus.textContent = "The lucky draw is spinning.";
 
   window.setTimeout(() => {
     state = {
@@ -69,7 +69,7 @@ function render() {
     spinButton.disabled = true;
     spinButton.textContent = "Start Lucky Draw";
     chanceBadge.textContent = "Locked";
-    chanceStatus.textContent = "직원 확인 후 룰렛 기회가 열립니다.";
+    chanceStatus.textContent = "Staff confirmation unlocks your lucky draw chance.";
     resultCard.hidden = true;
     return;
   }
@@ -81,7 +81,7 @@ function render() {
     spinButton.disabled = false;
     spinButton.textContent = "Start Lucky Draw";
     chanceBadge.textContent = "1 Chance";
-    chanceStatus.textContent = "룰렛 기회가 생겼습니다.";
+    chanceStatus.textContent = "Your lucky draw chance is ready.";
     resultCard.hidden = true;
     return;
   }
@@ -89,7 +89,7 @@ function render() {
   spinButton.disabled = true;
   spinButton.textContent = "Coupon Issued";
   chanceBadge.textContent = "Complete";
-  chanceStatus.textContent = "무료 음료 쿠폰이 발급되었습니다.";
+  chanceStatus.textContent = "Your free drink coupon has been issued.";
   resultText.textContent = state.prize;
   resultCard.hidden = false;
 }
